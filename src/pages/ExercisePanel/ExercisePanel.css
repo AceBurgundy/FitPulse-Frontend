@@ -1,0 +1,136 @@
+#exercise-panel {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#exercise-panel__bottom {
+    font-family: "Poppins",sans-serif;
+    padding: 1rem;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#exercise-panel__data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.exercise-panel__data-name {
+    font-family: "Pathway Extreme", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    width: fit-content;
+    padding: 0.5em;
+    color: white;
+    border-radius: 5px;
+}
+
+.exercise-panel__data-description {
+    font-family: "Pathway Extreme", sans-serif;
+    padding: 1em;
+    color: white;
+    border-radius: 5px;
+}
+
+.exercise-panel__data-steps-item {
+    font-family: "Pathway Extreme", sans-serif;
+    padding: 1em;
+    margin-bottom: 0.5rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.exercise-panel__timer-opener {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    margin-top: 5px;
+    font-family: 'Bebas Neue', cursive;
+    transition: 500ms ease-in-out;
+}
+
+.exercise-panel__timer-opener.timer-shown {
+    right: -100%;
+}
+
+.exercise-panel__timer {
+    background-color: rgba(255, 255, 255, 0.311);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100%;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    gap: calc(1rem + 1vw);
+    padding: 1em;
+    box-shadow: 0px -7px 200px -7px rgba(0,0,0,0.35);
+    transition: 500ms ease-in-out;
+}
+
+.exercise-panel__timer.show {
+    bottom: 0;
+}
+
+#exercise-panel__timer-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.exercise-panel__timer-button {
+    width: 7rem;
+    height: 7rem;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 5px;
+}
+
+.exercise-panel__nav-button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+}
+
+.exercise-panel__nav-button-icon {
+    fill: white;
+}
+
+#exercise-panel__nav-button-left {
+    transform: rotate(-190deg);
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+#exercise-panel__nav-button-right {
+    transform: rotate(10deg);
+    margin-left: 5px;
+    margin-top: 2px;
+}

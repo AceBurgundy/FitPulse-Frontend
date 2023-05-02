@@ -1,0 +1,123 @@
+
+@media screen and (orientation: portrait) {
+
+#biometrics {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 10% 10% 70% 10%;
+  flex-direction: column;
+}
+
+#biometrics__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#biometrics__prompt-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', serif;
+  line-height: 1.2rem;
+}
+
+/* Element level selectors */
+#biometrics__prompt-message-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#biometrics__prompt-message-extra {
+  width: 80%;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 80%;
+}
+
+#biometrics__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+
+.biometrics__form-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+
+.biometrics__form-label {
+  font-size: 1.1rem;
+}
+
+.biometrics__form-input {
+  display: flex;
+}
+
+.biometrics__input {
+  width: 80%;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.579);
+}
+
+.biometrics__select {
+  border: 1px solid #6c63ff;
+  border-radius: 8px;
+  display: flex;
+}
+
+.select-item-right, .select-item-left {
+  cursor: pointer;
+  padding: 0.4em;
+  transition: 250ms ease;
+}
+
+.select-item-left {
+  border-radius: 5px 0 0 5px;
+}
+
+.select-item-right {
+  border-radius: 0 5px 5px 0;
+}
+
+.select-item-left.selected, .select-item-right.selected {
+  border-radius: 5px;
+  background-color: #6c63ff;
+  color: white;
+}
+
+/* Modifier level selectors */
+#biometrics__navigation-button-previous {
+  color: black;
+}
+
+.biometrics__nav-button {
+  font-size: 1rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-family: 'Poppins', serif;
+  }
+
+  #biometrics__button-container-button-next {
+    padding: 0.5rem;
+    width: 80%;
+    text-align: center;
+    background-color: #6c63ff;
+  }
+
+  #biometrics__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

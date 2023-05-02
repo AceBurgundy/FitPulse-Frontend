@@ -1,0 +1,35 @@
+.exercise-item {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    background-color: white;
+    border-bottom: 1px solid #908e8e55;
+}
+
+.exercise-item__drag-icon {
+    width: 1.2rem;
+    opacity: 50%;
+}
+
+.exercise-item__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-item__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: "Poppins";
+    padding: 1.5em 0;
+}
+
+.exercise-item__right-exercise-name {
+    font-size: 1rem;
+}
+
+.exercise-item__right-exercise-settings {
+    display: flex;
+    gap: 5px;
+}
+

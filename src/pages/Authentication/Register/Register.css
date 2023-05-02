@@ -1,0 +1,103 @@
+@media screen and (orientation: portrait) {
+    
+    .register-svg {
+        width: 1.5rem;
+        opacity: 60%;
+        transition: 500ms;
+    }
+    
+    #register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffffff;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    #register__form {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 450px;
+    }
+    
+    #register__form-welcome {
+        font-size: calc(2.5rem + 1vw);
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+        margin-left: 5px;
+    }
+
+    #register__form-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .register__form-input-block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        padding: 0.5rem 1.1rem;
+    }
+
+    .register__form-input-block-input {
+        padding: 0.5em 1em;
+        margin-left: 0.5rem;
+        border: none;
+        font-size: 1.1rem;
+        width: 100%;
+        outline: none;
+    }
+
+    .register__form-input-block-input::placeholder {
+        font-family: "Poppins", sans-serif;
+    }
+    
+    #register__form-bottom {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #register__form-tag {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 0.5em;
+    }
+    
+    #register__form-submit {
+        width: fit-content;
+        padding: 1.5em;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #register__form-submit:hover svg {
+        transform: translateX(20%);
+    }
+
+    #register__redirect {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+    }
+
+    #register__redirect:hover {
+        color: black;
+    }
+    
+}

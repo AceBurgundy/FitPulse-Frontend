@@ -1,0 +1,27 @@
+.card {
+    border-radius: 15px;
+    width: 83%;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    padding: 2em 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.completed {
+    pointer-events: none;
+}
+
+.card__text {
+    font-size: calc(1.8rem + 1vw);
+}
+
+.card__p {
+    margin-top: 5px;
+    font-size: calc(0.4rem + 1vw);
+}
+
+.card__start {
+    margin-top: 2rem;
+    font-size: calc(1.2rem + 1vw);
+}

@@ -1,0 +1,105 @@
+@media screen and (orientation: portrait) {
+
+    .login-svg {
+        width: 1.5rem;
+        opacity: 60%;
+        transition: 500ms;
+    }
+    
+    #login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffffff;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    #login__form {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 450px;
+    }
+    
+    #login__form-welcome {
+        font-size: calc(2.5rem + 1vw);
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+        margin-left: 5px;
+    }
+
+    .login__form-input-block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        padding: 0.5rem 1.1rem;
+    }
+
+    .login__form-input-block:first-of-type {
+        margin-bottom: 1em;
+    }
+
+    .login__form-input-block-input {
+        padding: 0.5em 1em;
+        margin-left: 0.5rem;
+        border: none;
+        font-size: 1.1rem;
+        width: 100%;
+        outline: none;
+    }
+
+    .login__form-input-block-input::placeholder {
+        font-family: "Poppins", sans-serif;
+    }
+    
+    #login__form-bottom {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #login__form-tag {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 0.5em;
+    }
+    
+    #login__form-submit {
+        width: fit-content;
+        padding: 1.5em;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    #login-svg {
+        width: 1.3rem;
+    }
+    
+    #login__form-submit:hover svg {
+        transform: translateX(20%);
+    }
+
+    #login__redirect {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+    }
+
+    #login__redirect:hover {
+        color: black;
+    }
+    
+}

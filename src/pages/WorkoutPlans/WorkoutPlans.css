@@ -1,0 +1,22 @@
+#workout-plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#toggle-create-workout {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    border: none;
+    border-radius: 20px;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-decoration: none;
+}

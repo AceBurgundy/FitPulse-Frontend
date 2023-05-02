@@ -1,0 +1,58 @@
+@media screen and (orientation: portrait) {
+
+    #gender-prompt {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 15% 75% 10%;
+        flex-direction: column;
+    }
+    
+    #gender-prompt-svg-container {
+        position: relative;
+    }
+
+    #male-workout-icon, #female-workout-icon {
+        width: 200%;
+        cursor: pointer;
+        height: fit-content;
+        transition: 500ms;
+    }
+    
+    #gender-prompt-button-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .gender-prompt-button-container-button {
+        padding: 0.5em 1em;
+        font-size: 1rem;
+        background-color: #6c63ff;
+        color: white;
+        font-weight: 500;
+        border-radius: 20px;
+        border: 1px solid white;
+        font-family: 'Poppins', serif;
+        position: relative;
+        z-index: 3;
+    }
+    
+    #gender-prompt-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', serif;
+        line-height: 1.5rem;
+    }
+
+    #gender-prompt-message-title {
+       font-size: 1.3rem; 
+    }
+
+    #next-button {
+        text-decoration: none;
+        background-color: #6c63ff;
+        padding: 0.75em 1.2em;
+    }
+}

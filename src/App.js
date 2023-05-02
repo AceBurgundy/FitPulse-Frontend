@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Map from './Map';
 
 function App() {
+  const [orientation, setOrientation] = useState('portrait');
+
+  useEffect(() => {
+    const checkOrientation = () => {
+      const isPortrait = window.innerHeight > window.innerWidth;
+      setOrientation(isPortrait ? 'portrait' : 'landscape');
+    };
+    checkOrientation();
+    window.addEventListener('resize', checkOrientation);
+
+    return () => {
+      window.removeEventListener('resize', checkOrientation);
+    };
+  }, []);
+
+  if (orientation === 'landscape') {
+    return <div className="App"><p>This app only works on portrait mode</p></div>;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Map />
     </div>
   );
 }

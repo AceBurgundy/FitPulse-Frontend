@@ -70,7 +70,7 @@ const Exercises = () => {
           <div
             className={`exercise__navigation ${gender}`}
           >
-            <Link to={`/workout-plans/${workout_id}/week/list`}>
+            <Link to={`/FitPulse/workout-plans/${workout_id}/week/list`}>
               <ArrowWithBodyIcon id="exercise-navigation-icon" />
             </Link>
             <p id="exercise__navigation-workout-name">
@@ -108,7 +108,7 @@ const Exercises = () => {
       <div id="exercise">
         <div className={`exercise__navigation ${gender}`} >
 
-          <Link to={`/workout-plans/${workout_id}/week/list`}>
+          <Link to={`/FitPulse/workout-plans/${workout_id}/week/list`}>
             <ArrowWithBodyIcon id={"exercise-navigation-icon"} />
           </Link>
 

@@ -42,7 +42,7 @@ function Register() {
         })
         .then(response => {
             if (response.data.success) {
-                navigate('/')
+                navigate('/FitPulse/')
             }
         })
         .catch (error => {
@@ -93,7 +93,7 @@ function Register() {
                         </button>
                     </div>
                 </form>
-                <Link id="register__redirect" to="/">Login</Link>
+                <Link id="register__redirect" to="/FitPulse/">Login</Link>
             </div>
         </>
     )

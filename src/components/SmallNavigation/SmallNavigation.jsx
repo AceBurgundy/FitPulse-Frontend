@@ -29,7 +29,7 @@ const SmallNavigation = ({ gender }) => {
         .then(response => {
             if (response.data.success) {
                 handleNotification(response.data.success)
-                navigate('/')
+                navigate('/FitPulse/')
                 sessionStorage.clear()
             }
         })

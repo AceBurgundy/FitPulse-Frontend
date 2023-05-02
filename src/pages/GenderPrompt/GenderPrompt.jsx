@@ -38,7 +38,7 @@ function GenderPrompt() {
       position: 'absolute',
       top: '50%',
       left: '50%',
-      transform: 'translate(-55%, -55%)',
+      transform: 'translate(-53%, -65%)',
       zIndex: 2
     })
 
@@ -72,7 +72,7 @@ function GenderPrompt() {
       position: 'absolute',
       top: '50%',
       right: '50%',
-      transform: 'translate(70%, -53%)',
+      transform: 'translate(60%, -60%)',
       zIndex: 2
     })
 

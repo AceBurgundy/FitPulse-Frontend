@@ -1,109 +1,115 @@
+#weekly-goals {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  #weekly-goals {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  #weekly-goals__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  #weekly-goals-day-container {
-    position: relative;
-  }
-  
-  #weekly-goals-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+#weekly-goals__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  #weekly-goals__prompt-message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', serif;
-    line-height: 1.2rem;
-    margin-bottom: 1em;
-  }
+#weekly-goals__top {
+  margin-bottom: 3rem;
+}
 
-  /* Element level selectors */
-  #weekly-goals__prompt-message-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  #weekly-goals__prompt-message-extra {
-    width: 80%;
-    text-align: center;
-    font-size: 0.8rem;
-    opacity: 80%;
-  }
-  
-  #weekly-goals__day-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    }
+#weekly-goals-day-container {
+  position: relative;
+}
 
-  #weekly-goals__day-container-text {
-    opacity: 60%;
-  }
-  
-  #weekly-goals__day-container-days {
-    display: flex;
-    padding: 1em;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: fit-content;
-    width: 80%;
-    gap: 0.5em;
-  }
+#weekly-goals-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-  .weekly-goals__nav-button {
-    font-size: 1rem;
-    padding: 1.5rem;
-    color: white;
-    border-radius: 50px;
-    border: none;
-    text-decoration: none;
-    font-family: 'Poppins', serif;
-    }
-  
-  #weekly-goals__navigation-button-previous {
-    color: black;
-  }
-  
-  #weekly-goals__button-container-button-next {
-    padding: 0.5rem;
-    margin: 1rem;
-    width: 80%;
-    text-align: center;
-    background-color: #6c63ff;
-  }
-  
-  .weekly-goals__day {
-    padding: 1.5rem 2rem;
-    height: fit-content;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #ccc;
-    font-family: 'Poppins', sans-serif;
-  }
+#weekly-goals__prompt-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', serif;
+  line-height: 1.2rem;
+  margin-bottom: 1em;
+}
 
-  .weekly-goals__day.selected {
-    background-color: #6c63ff;
-    color: white;
-  }
-  
-  #weekly-goals__button-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    }
+/* Element level selectors */
+#weekly-goals__prompt-message-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#weekly-goals__prompt-message-extra {
+  width: 80%;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 80%;
+}
+
+#weekly-goals__day-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#weekly-goals__day-container-text {
+  opacity: 60%;
+}
+
+#weekly-goals__day-container-days {
+  display: flex;
+  padding: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 80%;
+  gap: 0.5em;
+}
+
+.weekly-goals__nav-button {
+  font-size: 1rem;
+  padding: 1.5rem;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-family: 'Poppins', serif;
+}
+
+#weekly-goals__navigation-button-previous {
+  color: black;
+}
+
+#weekly-goals__button-container-button-next {
+  padding: 0.7rem;
+  margin: 1rem;
+  width: 80%;
+  text-align: center;
+  background-color: #6c63ff;
+}
+
+.weekly-goals__day {
+  padding: 1.5rem 2rem;
+  height: fit-content;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.weekly-goals__day.selected {
+  background-color: #6c63ff;
+  color: white;
+}
+
+#weekly-goals__button-container {
+  position: fixed;
+  margin-bottom: 1rem;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

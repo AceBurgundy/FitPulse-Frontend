@@ -52,7 +52,7 @@ const WeeklyRoutine = () => {
         <Base onNotification={(pillNotification) => Base.pillNotification = pillNotification} />
         <div id="weekly-plans">
             <div className={`weekly-plans__navigation ${gender}`}>
-                <Link to="/workout-plans"><ArrowWithBodyIcon id="weekly-plans__navigation-icon" /></Link>
+                <Link to="/FitPulse/workout-plans"><ArrowWithBodyIcon id="weekly-plans__navigation-icon" /></Link>
                 <p id="weekly-plans__navigation-workout-name">{workoutName}</p>
             </div>
             <div id="weekly-plans__week-container">

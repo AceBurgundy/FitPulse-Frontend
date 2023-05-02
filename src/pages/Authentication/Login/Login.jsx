@@ -39,9 +39,9 @@ function Login() {
             sessionStorage.setItem('userId', data.userHashedId)
             if (data.success) {
                 if (data.hasWorkoutPlans) {
-                    navigate("/workout-plans")
+                    navigate("/FitPulse/workout-plans")
                 } else {
-                    navigate("/gender-prompt")
+                    navigate("/FitPulse/gender-prompt")
                 }
             }
 
@@ -88,7 +88,7 @@ function Login() {
                         </button>
                     </div>
                 </form>
-                <Link id="login__redirect" to="/register">Create Account</Link>
+                <Link id="login__redirect" to="/FitPulse/register">Create Account</Link>
             </div>
         </>
     )

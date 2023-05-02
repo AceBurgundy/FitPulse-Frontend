@@ -54,7 +54,7 @@ const WorkoutPlans = () => {
         <div id="workout-plans">
             {workoutPlans.map((plan) => (
                 <WorkoutPlanCard 
-                    address={`/workout-plans/${plan.id}/week/list`} 
+                    address={`/FitPulse/workout-plans/${plan.id}/week/list`} 
                     key={plan.id} 
                     object={plan}
                     gender={gender}
@@ -62,7 +62,7 @@ const WorkoutPlans = () => {
             ))}
         </div>
         {
-            workoutsCompleted && <Link id="toggle-create-workout" className={`${gender}`} to="/biometrics">Create New Workout</Link>
+            workoutsCompleted && <Link id="toggle-create-workout" className={`${gender}`} to="/FitPulse/biometrics">Create New Workout</Link>
         }
     </>
   )

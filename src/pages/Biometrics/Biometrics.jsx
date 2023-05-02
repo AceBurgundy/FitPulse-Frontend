@@ -31,7 +31,7 @@ function Biometrics() {
       .then(response => {
           const { data } = response          
           if (data.success) {
-            navigate('/weekly-goals')
+            navigate('/FitPulse/weekly-goals')
           }
       })
       .catch (error => {
@@ -87,7 +87,7 @@ function Biometrics() {
       <Base onNotification={(pillNotification) => Base.pillNotification = pillNotification} />
       <div id="biometrics">
         <div id="biometrics__navigation">
-          <Link className="biometrics__nav-button" id="biometrics__navigation-button-previous" to="/gender-prompt">
+          <Link className="biometrics__nav-button" id="biometrics__navigation-button-previous" to="/FitPulse/gender-prompt">
             Previous
           </Link>
         </div>
@@ -129,7 +129,7 @@ function Biometrics() {
           </div>
         </form>
         <div id="biometrics__button-container">
-          <button onClick={handleSubmit} className="biometrics__nav-button" id="biometrics__button-container-button-next" to="/biometrics">
+          <button onClick={handleSubmit} className="biometrics__nav-button" id="biometrics__button-container-button-next">
             Proceed
           </button>
         </div>

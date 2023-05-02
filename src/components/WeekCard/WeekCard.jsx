@@ -92,7 +92,7 @@ const WeekCard = ({currentWeek, finished, week_id, weekCount, workout_id, handle
                     return (
                         <>
                             <Link
-                                to={`/workout-plans/${workout_id}/week/day/${day.id}/list`}
+                                to={`/FitPulse/workout-plans/${workout_id}/week/day/${day.id}/list`}
                                 key={day.id} 
                                 className={circleClass}
                             >

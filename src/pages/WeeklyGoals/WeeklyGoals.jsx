@@ -38,7 +38,7 @@ function WeeklyGoals() {
     })
       .then((response) => {
         if (response.data.success) {
-          navigate('/workout-plans')
+          navigate('/FitPulse/workout-plans')
         }
       })
       .catch (error => {
@@ -66,7 +66,7 @@ function WeeklyGoals() {
       <Base onNotification={(pillNotification) => (Base.pillNotification = pillNotification)} />
       <div className="weekly-goals" id="weekly-goals">
         <div id="weekly-goals__navigation">
-          <Link className="weekly-goals__nav-button" id="weekly-goals__navigation-button-previous" to="/biometrics">
+          <Link className="weekly-goals__nav-button" id="weekly-goals__navigation-button-previous" to="/FitPulse/biometrics">
             Previous
           </Link>
         </div>

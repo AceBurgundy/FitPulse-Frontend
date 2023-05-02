@@ -91,7 +91,6 @@ function GenderPrompt() {
     event.preventDefault()
     
     if (gender !== "male" && gender !== "female") {
-      console.log(gender)
       handleNotification("Please selete a gender")
       return
     }
@@ -103,7 +102,7 @@ function GenderPrompt() {
     .then(response => {
         const { data } = response        
         if (data.success) {
-          navigate('/biometrics')
+          navigate('/FitPulse/biometrics')
         }
     })
     .catch (error => {

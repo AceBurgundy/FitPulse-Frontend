@@ -65,16 +65,18 @@ function WeeklyGoals() {
     <>
       <Base onNotification={(pillNotification) => (Base.pillNotification = pillNotification)} />
       <div className="weekly-goals" id="weekly-goals">
-        <div id="weekly-goals__navigation">
-          <Link className="weekly-goals__nav-button" id="weekly-goals__navigation-button-previous" to="/FitPulse/biometrics">
-            Previous
-          </Link>
-        </div>
-        <div id="weekly-goals__prompt-message">
-          <p id="weekly-goals__prompt-message-title">Set Your Weekly Goals</p>
-          <p id="weekly-goals__prompt-message-extra">
-            We recommend training at least 3 times weekly for better results
-          </p>
+        <div id="weekly-goals__top">
+          <div id="weekly-goals__navigation">
+            <Link className="weekly-goals__nav-button" id="weekly-goals__navigation-button-previous" to="/FitPulse/biometrics">
+              Previous
+            </Link>
+          </div>
+          <div id="weekly-goals__prompt-message">
+            <p id="weekly-goals__prompt-message-title">Set Your Weekly Goals</p>
+            <p id="weekly-goals__prompt-message-extra">
+              We recommend training at least 3 times weekly for better results
+            </p>
+          </div>
         </div>
         <div id="weekly-goals__day-container">
           <p id="weekly-goals__day-container-text">Weekly Training Days</p>

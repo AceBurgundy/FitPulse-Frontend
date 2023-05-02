@@ -23,7 +23,7 @@ const SmallNavigation = ({ gender }) => {
     function handleLogout(event) {
         event.preventDefault()
 
-        axios.post('http://aceburgundy.pythonanywhere.com/api/user/logout/', {
+        axios.post('https//aceburgundy.pythonanywhere.com/api/user/logout/', {
             'X-User-Id': sessionStorage.getItem('userId')
         })
         .then(response => {

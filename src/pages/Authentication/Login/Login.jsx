@@ -29,7 +29,7 @@ function Login() {
 
     function handleLogin(event) {
         event.preventDefault()
-        axios.post('http://aceburgundy.pythonanywhere.com/api/user/login/', {
+        axios.post('https//aceburgundy.pythonanywhere.com/api/user/login/', {
           username,
           password
         })

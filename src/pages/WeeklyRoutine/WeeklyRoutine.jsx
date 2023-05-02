@@ -3,7 +3,7 @@ import WeekCard from "../../components/WeekCard/WeekCard"
 import React, { useState, useEffect } from "react"
 import { Link, useParams } from 'react-router-dom'
 import Base from "../Base/Base"
-import api from "../../../Api"
+import api from "../../Api"
 import "./WeeklyRoutine.css"
 
 const WeeklyRoutine = () => {

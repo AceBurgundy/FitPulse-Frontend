@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import api from "../../../Api"
+import api from "../../Api"
 import axios from "axios"
 import "./WeekCard.css"
 

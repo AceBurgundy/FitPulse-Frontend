@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Base from "../Base/Base"
-import api from "../../../Api"
+import api from "../../Api"
 import "./ExercisePanel.css"
 
 // icons

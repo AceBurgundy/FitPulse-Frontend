@@ -86,14 +86,16 @@ function Biometrics() {
     <>
       <Base onNotification={(pillNotification) => Base.pillNotification = pillNotification} />
       <div id="biometrics">
-        <div id="biometrics__navigation">
-          <Link className="biometrics__nav-button" id="biometrics__navigation-button-previous" to="/FitPulse/gender-prompt">
-            Previous
-          </Link>
-        </div>
-        <div id="biometrics__prompt-message">
-          <p id="biometrics__prompt-message-title">Let Us Know You Better</p>
-          <p id="biometrics__prompt-message-extra">Let us know you better to help boost your workout results</p>
+        <div id="biometrics__top">
+          <div id="biometrics__navigation">
+            <Link className="biometrics__nav-button" id="biometrics__navigation-button-previous" to="/FitPulse/gender-prompt">
+              Previous
+            </Link>
+          </div>
+          <div id="biometrics__prompt-message">
+            <p id="biometrics__prompt-message-title">Let Us Know You Better</p>
+            <p id="biometrics__prompt-message-extra">Let us know you better to help boost your workout results</p>
+          </div>
         </div>
         <form id="biometrics__form">
           <div className="biometrics__form-input-container">

@@ -1,9 +1,9 @@
 
   #weekly-goals {
-    display: grid;
-    height: 95vh;
-    grid-template-rows: 10% 10% 65% 15%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   
   #weekly-goals__navigation {
@@ -29,6 +29,7 @@
     justify-content: center;
     font-family: 'Poppins', serif;
     line-height: 1.2rem;
+    margin-bottom: 1em;
   }
 
   /* Element level selectors */
@@ -67,7 +68,7 @@
 
   .weekly-goals__nav-button {
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     color: white;
     border-radius: 50px;
     border: none;
@@ -80,7 +81,8 @@
   }
   
   #weekly-goals__button-container-button-next {
-    padding: 0.7rem;
+    padding: 0.5rem;
+    margin: 1rem;
     width: 80%;
     text-align: center;
     background-color: #6c63ff;

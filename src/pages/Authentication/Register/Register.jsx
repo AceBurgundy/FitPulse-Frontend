@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../../Base/Base'
-import axios from 'axios'
+import api from '../../../../Api'
 import "./Register.css"
 
 // icons
@@ -35,7 +35,7 @@ function Register() {
 
     function handleRegister(event) {
         event.preventDefault()
-        axios.post('https://aceburgundy.pythonanywhere.com/api/user/create/', {
+        api.post('/api/user/create/', {
             username,
             email,
             password

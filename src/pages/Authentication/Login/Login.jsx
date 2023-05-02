@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../../Base/Base'
+import api from '../../../../Api'
 import axios from 'axios'
 import "./Login.css"
 
@@ -29,7 +30,7 @@ function Login() {
 
     function handleLogin(event) {
         event.preventDefault()
-        axios.post('https://aceburgundy.pythonanywhere.com/api/user/login/', {
+        api.post('/api/user/login/', {
           username,
           password
         })

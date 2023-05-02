@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom'
+import Base from '../../pages/Base/Base'
 import React, {useState} from 'react'
+import api from '../../../Api'
 import "./SmallNavigation.css"
-import axios from 'axios'
 
 // icons
 import MenuIcon from '../../assets/svg/MenuIcon'
-import Base from '../../pages/Base/Base'
 
 const SmallNavigation = ({ gender }) => {
     const navigate = useNavigate()
@@ -23,7 +23,7 @@ const SmallNavigation = ({ gender }) => {
     function handleLogout(event) {
         event.preventDefault()
 
-        axios.post('https://aceburgundy.pythonanywhere.com/api/user/logout/', {
+        api.post('/api/user/logout/', {
             'X-User-Id': sessionStorage.getItem('userId')
         })
         .then(response => {

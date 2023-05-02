@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Base from "../Base/Base"
+import api from "../../../Api"
 import "./ExercisePanel.css"
-import axios from "axios"
 
 // icons
 import ThinArrowRightIcon from "../../assets/svg/ThinArrowRightIcon"
@@ -81,7 +81,7 @@ const ExercisePanel = ({ exerciseObjects , gender}) => {
 
   function setExerciseAsCompleted(exerciseObject_id) {
 
-    axios.put('https://aceburgundy.pythonanywhere.com/api/exercise/finish/', {
+    api.put('/api/exercise/finish/', {
       'X-User-Id': sessionStorage.getItem('userId'),
       exercise_id : exerciseObject_id
     })

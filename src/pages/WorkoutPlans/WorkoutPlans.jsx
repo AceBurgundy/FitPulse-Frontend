@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Base from "../Base/Base"
+import api from "../../../Api"
 import "./WorkoutPlans.css"
-import axios from "axios"
 
 // icons
 import WorkoutPlanCard from "../../components/WorkoutPlanCard/WorkoutPlanCard"
@@ -15,8 +15,8 @@ const WorkoutPlans = () => {
     const hashed_id = sessionStorage.getItem("userId")
 
     useEffect(() => {
-        axios
-        .get(`https://aceburgundy.pythonanywhere.com/api/workout-plans/list/${hashed_id}/`)
+        api
+        .get(`/api/workout-plans/list/${hashed_id}/`)
         .then((response) => {
             const { data } = response
             setGender(data.gender)

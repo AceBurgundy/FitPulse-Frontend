@@ -1,20 +1,20 @@
 
     #gender-prompt {
-        display: grid;
-        height: 95vh;
-        overflow-x: hidden;
-        grid-template-rows: 15% 75% 10%;
+        display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        overflow-x: hidden;
     }
     
     #gender-prompt-svg-container {
         position: relative;
+        height: 80%;
     }
 
     #male-workout-icon, #female-workout-icon {
-        width: 200%;
+        height: 100%;
         cursor: pointer;
-        height: fit-content;
         transition: 500ms;
     }
     

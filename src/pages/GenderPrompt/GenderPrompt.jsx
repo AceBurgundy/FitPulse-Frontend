@@ -15,7 +15,6 @@ function GenderPrompt() {
   const navigate = useNavigate()
 
   const [maleStyles, setMaleStyles] = useState({
-    width: '190%',
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -37,16 +36,15 @@ function GenderPrompt() {
 
     setMaleStyles({
       position: 'absolute',
-      width: '180%',
       top: '50%',
       left: '50%',
-      transform: 'translate(-55%, -50%)',
+      transform: 'translate(-55%, -55%)',
       zIndex: 2
     })
 
     setFemaleStyles({
       position: 'absolute',
-      width: '100%',
+      width: '120%',
       top: '50%',
       right: '50%',
       transform: 'translate(100%, -50%)',
@@ -72,7 +70,6 @@ function GenderPrompt() {
 
     setFemaleStyles({
       position: 'absolute',
-      width: '200%',
       top: '50%',
       right: '50%',
       transform: 'translate(70%, -53%)',

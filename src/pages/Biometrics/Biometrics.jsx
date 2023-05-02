@@ -23,7 +23,7 @@ function Biometrics() {
       let userWeight = weightUnit === "lbs" ? convertWeightFromLbs(weight) : weight
       let userHeight = heightUnit === "in" ? convertHeightFromInches(height) : height
 
-      axios.put('https//aceburgundy.pythonanywhere.com/api/user/biometrics/', {
+      axios.put('https://aceburgundy.pythonanywhere.com/api/user/biometrics/', {
         'X-User-Id': sessionStorage.getItem('userId'),
         userHeight,
         userWeight

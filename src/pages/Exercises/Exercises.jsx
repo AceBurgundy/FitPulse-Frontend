@@ -21,7 +21,7 @@ const Exercises = () => {
   useEffect(() => {
     axios
       .get(
-        `https//aceburgundy.pythonanywhere.com/api/workout-plans/week/day/${day_id}/${hashed_id}/exercises/list/`
+        `https://aceburgundy.pythonanywhere.com/api/workout-plans/week/day/${day_id}/${hashed_id}/exercises/list/`
       )
       .then((response) => {
         const { data } = response

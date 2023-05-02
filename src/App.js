@@ -24,7 +24,7 @@ function App() {
   if (orientation === 'landscape') {
     return  (
       <div id="App__warning">
-        <p>This app only works best on your phone or on responsive design mode</p>
+        <p>This app only works best on your phone, portrait or on responsive design mode</p>
         <p id="App__shortcut">Ctrl + Shift + M</p>
       </div>
     )

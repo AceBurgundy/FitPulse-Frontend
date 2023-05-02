@@ -3,8 +3,8 @@ import WeekCard from "../../components/WeekCard/WeekCard"
 import React, { useState, useEffect } from "react"
 import { Link, useParams } from 'react-router-dom'
 import Base from "../Base/Base"
-import api from "../../Api"
 import "./WeeklyRoutine.css"
+import axios from "axios"
 
 const WeeklyRoutine = () => {
 
@@ -15,15 +15,16 @@ const WeeklyRoutine = () => {
     const hashed_id = sessionStorage.getItem("userId")
 
     useEffect(() => {
-        api
-        .get(`/api/workout-plans/${workout_id}/${hashed_id}/week/list/`)
+    axios.get(`/api/workout-plans/${workout_id}/${hashed_id}/week/list/`)
         .then((response) => {
+            
             const { data } = response
             setWeeks(data.data)
             setWorkoutName(data.workoutName)
             setGender(data.gender)
         })
         .catch (error => {
+            
             const { response } = error
             if (response) {
                 const { response } = error

@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import Base from '../../pages/Base/Base'
 import React, {useState} from 'react'
-import api from '../../Api'
 import "./SmallNavigation.css"
+import axios from 'axios'
 
 // icons
 import MenuIcon from '../../assets/svg/MenuIcon'
 
-const SmallNavigation = ({ gender }) => {
+const SmallNavigation = () => {
     const navigate = useNavigate()
 
     const [panelToggled, setPanelToggled] = useState(false)
@@ -23,7 +23,7 @@ const SmallNavigation = ({ gender }) => {
     function handleLogout(event) {
         event.preventDefault()
 
-        api.post('/api/user/logout/', {
+        axios.post('/api/user/logout/', {
             'X-User-Id': sessionStorage.getItem('userId')
         })
         .then(response => {

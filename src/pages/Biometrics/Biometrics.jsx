@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../Base/Base'
+import api from '../../../Api'
 import './Biometrics.css'
-import axios from 'axios'
 
 function Biometrics() {
 
@@ -23,7 +23,7 @@ function Biometrics() {
       let userWeight = weightUnit === "lbs" ? convertWeightFromLbs(weight) : weight
       let userHeight = heightUnit === "in" ? convertHeightFromInches(height) : height
 
-      axios.put('https://aceburgundy.pythonanywhere.com/api/user/biometrics/', {
+      api.put('/api/user/biometrics/', {
         'X-User-Id': sessionStorage.getItem('userId'),
         userHeight,
         userWeight

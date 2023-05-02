@@ -3,7 +3,7 @@ import ExercisePanel from "./../ExercisePanel/ExercisePanel"
 import React, { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import Base from "../Base/Base"
-import axios from "axios"
+import api from "../../../Api"
 import "./Exercises.css"
 
 // icons
@@ -19,9 +19,9 @@ const Exercises = () => {
   const hashed_id = sessionStorage.getItem("userId")
 
   useEffect(() => {
-    axios
+    api
       .get(
-        `https://aceburgundy.pythonanywhere.com/api/workout-plans/week/day/${day_id}/${hashed_id}/exercises/list/`
+        `/api/workout-plans/week/day/${day_id}/${hashed_id}/exercises/list/`
       )
       .then((response) => {
         const { data } = response

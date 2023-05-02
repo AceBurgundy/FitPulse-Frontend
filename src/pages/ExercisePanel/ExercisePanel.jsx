@@ -81,7 +81,7 @@ const ExercisePanel = ({ exerciseObjects , gender}) => {
 
   function setExerciseAsCompleted(exerciseObject_id) {
 
-    axios.put('http://aceburgundy.pythonanywhere.com/api/exercise/finish/', {
+    axios.put('https//aceburgundy.pythonanywhere.com/api/exercise/finish/', {
       'X-User-Id': sessionStorage.getItem('userId'),
       exercise_id : exerciseObject_id
     })

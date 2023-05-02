@@ -35,7 +35,7 @@ function Register() {
 
     function handleRegister(event) {
         event.preventDefault()
-        axios.post('http://aceburgundy.pythonanywhere.com/api/user/create/', {
+        axios.post('https//aceburgundy.pythonanywhere.com/api/user/create/', {
             username,
             email,
             password

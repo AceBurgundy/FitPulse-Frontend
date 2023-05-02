@@ -16,7 +16,7 @@ const WeeklyRoutine = () => {
 
     useEffect(() => {
         axios
-        .get(`http://aceburgundy.pythonanywhere.com/api/workout-plans/${workout_id}/${hashed_id}/week/list/`)
+        .get(`https//aceburgundy.pythonanywhere.com/api/workout-plans/${workout_id}/${hashed_id}/week/list/`)
         .then((response) => {
             const { data } = response
             setWeeks(data.data)

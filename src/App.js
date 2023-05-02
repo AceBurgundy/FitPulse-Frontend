@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Map from './Map';
+import axios from 'axios'
 
 function App() {
   const [orientation, setOrientation] = useState('portrait');
+
+  axios.defaults.baseURL = "https://aceburgundy.pythonanywhere.com/";
 
   useEffect(() => {
     const checkOrientation = () => {

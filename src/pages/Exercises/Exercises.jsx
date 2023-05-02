@@ -3,7 +3,7 @@ import ExercisePanel from "./../ExercisePanel/ExercisePanel"
 import React, { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import Base from "../Base/Base"
-import api from "../../Api"
+import axios from 'axios'
 import "./Exercises.css"
 
 // icons
@@ -19,35 +19,34 @@ const Exercises = () => {
   const hashed_id = sessionStorage.getItem("userId")
 
   useEffect(() => {
-    api
-      .get(
-        `/api/workout-plans/week/day/${day_id}/${hashed_id}/exercises/list/`
-      )
-      .then((response) => {
-        const { data } = response
-        setExercises(data.data)
-        setDayName(data.dayName)
-        setGender(data.gender)
-        setCurrentExerciseIndex(0) // Set the first exercise as the current exercise
+    axios.get( `/api/workout-plans/week/day/${day_id}/${hashed_id}/exercises/list/`)
+        .then((response) => {
+
+          const { data } = response
+          setExercises(data.data)
+          setDayName(data.dayName)
+          setGender(data.gender)
+          setCurrentExerciseIndex(0)
+        })
+        .catch (error => {
+
+          const { response } = error
+          if (response) {
+              const { response } = error
+              if (response) {
+                  const { data } = response
+                  Object.values(data).map(value => {
+                      if (Array.isArray(value)) {
+                          return value.map(value_item => {
+                              return handleNotification(value_item)
+                          })
+                      } else {
+                          return handleNotification(value)
+                      }
+                  })
+              }
+          }
       })
-      .catch (error => {
-        const { response } = error
-        if (response) {
-            const { response } = error
-            if (response) {
-                const { data } = response
-                Object.values(data).map(value => {
-                    if (Array.isArray(value)) {
-                        return value.map(value_item => {
-                            return handleNotification(value_item)
-                        })
-                    } else {
-                        return handleNotification(value)
-                    }
-                })
-            }
-        }
-    })
   }, [day_id, hashed_id])
 
   function handleNotification(message) {

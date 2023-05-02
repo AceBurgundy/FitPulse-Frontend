@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../../Base/Base'
-import api from '../../../Api'
+import axios from 'axios'
 import "./Register.css"
 
 // icons
@@ -35,7 +35,7 @@ function Register() {
 
     function handleRegister(event) {
         event.preventDefault()
-        api.post('/api/user/create/', {
+        axios.post('/api/user/create/', {
             username,
             email,
             password

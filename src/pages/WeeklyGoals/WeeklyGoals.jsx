@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../Base/Base'
-import api from '../../Api'
 import './WeeklyGoals.css'
+import axios from 'axios'
 
 function WeeklyGoals() {
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -32,7 +32,7 @@ function WeeklyGoals() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    api.post('/api/workout-plans/create/', {
+    axios.post('/api/workout-plans/create/', {
       'X-User-Id': sessionStorage.getItem('userId'),
       preferredDays,
     })

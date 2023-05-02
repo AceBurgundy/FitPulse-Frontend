@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../../Base/Base'
-import api from '../../../Api'
 import "./Login.css"
+import axios from 'axios'
 
 // icons
 import UserIcon from '../../../assets/svg/PersonIcon'
@@ -29,7 +29,8 @@ function Login() {
 
     function handleLogin(event) {
         event.preventDefault()
-        api.post('/api/user/login/', {
+        
+        axios.post('/api/user/login/', {
           username,
           password
         })

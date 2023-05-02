@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import api from "../../Api"
+import axios from 'axios'
 import "./WeekCard.css"
 
 // icons
@@ -22,14 +22,15 @@ const WeekCard = ({currentWeek, finished, week_id, weekCount, workout_id, handle
     const hashed_id = sessionStorage.getItem("userId")
 
     useEffect(() => {
-        api
-        .get(`/api/workout-plans/week/${week_id}/${hashed_id}/day/list/`)
+        axios.get(`/api/workout-plans/week/${week_id}/${hashed_id}/day/list/`)
         .then((response) => {
+            
             const { data } = response
             setGender(data.gender)
             setDays(data.data)
         })
         .catch (error => {
+            
             const { response } = error
             if (response) {
                 const { response } = error

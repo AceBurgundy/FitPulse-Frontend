@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Base from '../Base/Base'
-import api from '../../Api'
 import "./GenderPrompt.css"
+import axios from 'axios'
 
 // icons
 import CycleMaleIcon from '../../assets/svg/CycleMaleIcon'
@@ -95,7 +95,7 @@ function GenderPrompt() {
       return
     }
     
-    api.put('/api/user/gender/', {
+    axios.put('/api/user/gender/', {
       'X-User-Id': sessionStorage.getItem('userId'), // Include user ID in the request headers
       gender
     })

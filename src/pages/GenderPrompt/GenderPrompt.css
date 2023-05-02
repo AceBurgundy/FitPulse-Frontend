@@ -13,12 +13,16 @@
     }
 
     #male-workout-icon, #female-workout-icon {
-        height: 100%;
+        height: 80%;
         cursor: pointer;
         transition: 500ms;
     }
     
     #gender-prompt-button-container {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        margin-bottom: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-evenly;

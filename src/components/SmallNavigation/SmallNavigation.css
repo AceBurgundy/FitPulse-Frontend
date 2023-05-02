@@ -40,7 +40,7 @@
 }
 
 #small-navigation__top-title {
-    font-size: calc(1.5rem + 100%);
+    font-size: calc(1rem + 100%);
     font-family: "Pathway Extreme";
     font-style: italic;
     color: rgb(97, 97, 97);

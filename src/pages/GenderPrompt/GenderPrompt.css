@@ -2,6 +2,7 @@
     #gender-prompt {
         display: grid;
         height: 100vh;
+        overflow-x: hidden;
         grid-template-rows: 15% 75% 10%;
         flex-direction: column;
     }
@@ -25,11 +26,11 @@
 
     .gender-prompt-button-container-button {
         padding: 0.5em 1em;
-        font-size: 1.4rem;
+        font-size: 1rem;
         background-color: #6c63ff;
         color: white;
         font-weight: 500;
-        border-radius: 20px;
+        border-radius: 40px;
         border: 1px solid white;
         font-family: 'Poppins', serif;
         position: relative;

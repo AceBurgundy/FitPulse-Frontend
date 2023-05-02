@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FitPulse/static/css/main.00c22690.css",
+    "main.css": "/FitPulse/static/css/main.8dedbc2b.css",
     "main.js": "/FitPulse/static/js/main.be2ccc10.js",
     "static/js/787.cda612ba.chunk.js": "/FitPulse/static/js/787.cda612ba.chunk.js",
     "index.html": "/FitPulse/index.html",
-    "main.00c22690.css.map": "/FitPulse/static/css/main.00c22690.css.map",
+    "main.8dedbc2b.css.map": "/FitPulse/static/css/main.8dedbc2b.css.map",
     "main.be2ccc10.js.map": "/FitPulse/static/js/main.be2ccc10.js.map",
     "787.cda612ba.chunk.js.map": "/FitPulse/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00c22690.css",
+    "static/css/main.8dedbc2b.css",
     "static/js/main.be2ccc10.js"
   ]
 }

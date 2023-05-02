@@ -32,7 +32,7 @@ function WeeklyGoals() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    axios.post('https//aceburgundy.pythonanywhere.com/api/workout-plans/create/', {
+    axios.post('https://aceburgundy.pythonanywhere.com/api/workout-plans/create/', {
       'X-User-Id': sessionStorage.getItem('userId'), // Include user ID in the request headers
       preferredDays,
     })

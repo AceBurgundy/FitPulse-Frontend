@@ -95,7 +95,7 @@ function GenderPrompt() {
       return
     }
     
-    axios.put('https//aceburgundy.pythonanywhere.com/api/user/gender/', {
+    axios.put('https://aceburgundy.pythonanywhere.com/api/user/gender/', {
       'X-User-Id': sessionStorage.getItem('userId'), // Include user ID in the request headers
       gender
     })

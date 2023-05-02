@@ -16,7 +16,7 @@ const WorkoutPlans = () => {
 
     useEffect(() => {
         axios
-        .get(`https//aceburgundy.pythonanywhere.com/api/workout-plans/list/${hashed_id}/`)
+        .get(`https://aceburgundy.pythonanywhere.com/api/workout-plans/list/${hashed_id}/`)
         .then((response) => {
             const { data } = response
             setGender(data.gender)

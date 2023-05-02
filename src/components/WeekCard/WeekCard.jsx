@@ -23,7 +23,7 @@ const WeekCard = ({currentWeek, finished, week_id, weekCount, workout_id, handle
 
     useEffect(() => {
         axios
-        .get(`https//aceburgundy.pythonanywhere.com/api/workout-plans/week/${week_id}/${hashed_id}/day/list/`)
+        .get(`https://aceburgundy.pythonanywhere.com/api/workout-plans/week/${week_id}/${hashed_id}/day/list/`)
         .then((response) => {
             const { data } = response
             setGender(data.gender)

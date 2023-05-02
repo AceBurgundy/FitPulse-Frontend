@@ -2,7 +2,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import Base from '../../Base/Base'
 import api from '../../../Api'
-import axios from 'axios'
 import "./Login.css"
 
 // icons

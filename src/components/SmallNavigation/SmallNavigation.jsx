@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Base from '../../pages/Base/Base'
 import React, {useState} from 'react'
-import api from '../../../Api'
+import api from '../../Api'
 import "./SmallNavigation.css"
 
 // icons

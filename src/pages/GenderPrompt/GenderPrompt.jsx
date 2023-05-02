@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Base from '../Base/Base'
-import api from '../../../Api'
+import api from '../../Api'
 import "./GenderPrompt.css"
 
 // icons

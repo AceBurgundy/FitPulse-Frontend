@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Base from "../Base/Base"
-import api from "../../../Api"
+import api from "../../Api"
 import "./WorkoutPlans.css"
 
 // icons

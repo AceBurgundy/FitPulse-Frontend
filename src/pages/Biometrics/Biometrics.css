@@ -1,6 +1,6 @@
 #biometrics {
   display: grid;
-  height: 100vh;
+  height: 95vh;
   grid-template-rows: 10% 10% 65% 15%;
   flex-direction: column;
 }

@@ -1,7 +1,7 @@
 
     #gender-prompt {
         display: grid;
-        height: 100vh;
+        height: 95vh;
         overflow-x: hidden;
         grid-template-rows: 15% 75% 10%;
         flex-direction: column;

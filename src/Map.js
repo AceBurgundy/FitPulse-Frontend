@@ -14,7 +14,7 @@ import Exercises from './pages/Exercises/Exercises'
 function Map() {
   return ( 
     <>
-        <Router basename="/FitPulse">
+        <Router>
           <Routes>
             <Route path="/FitPulse/" element={<Login />} />
             <Route path="/FitPulse/register" element={<Register />} />

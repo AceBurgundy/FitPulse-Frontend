@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // /pages
 import Register from './pages/Authentication/Register/Register'
@@ -14,7 +14,7 @@ import Exercises from './pages/Exercises/Exercises'
 function Map() {
   return ( 
     <>
-        <Router>
+        <Router basename="/FitPulse">
           <Routes>
             <Route path="/FitPulse/" element={<Login />} />
             <Route path="/FitPulse/register" element={<Register />} />

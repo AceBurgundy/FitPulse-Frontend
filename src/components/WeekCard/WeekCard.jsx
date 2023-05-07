@@ -8,6 +8,7 @@ import ThinArrowRightIcon from "../../assets/svg/ThinArrowRightIcon"
 import LightningIcon from "../../assets/svg/LightningIcon"
 import TrophyIcon from "../../assets/svg/TrophyIcon"
 import CheckIcon from "../../assets/svg/CheckIcon"
+import Skeleton from "react-loading-skeleton"
 
 function currentDay() {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -73,7 +74,9 @@ const WeekCard = ({currentWeek, finished, week_id, weekCount, workout_id, handle
                     : currentWeek ?
                         "week_card__right-days current"
                     :
-                        "week_card__right-days locked"}>
+                        "week_card__right-days locked"}
+                style={{animation:"summonAfter 0.5s"}}
+                >
 
                 { days.map(day => {
 
@@ -96,6 +99,7 @@ const WeekCard = ({currentWeek, finished, week_id, weekCount, workout_id, handle
                                 to={`/FitPulse/workout-plans/${workout_id}/week/day/${day.id}/list`}
                                 key={day.id} 
                                 className={circleClass}
+                                style={{animation:`glow ${day.id * 9}ms`}}
                             >
                                 {   
                                     day.finished ? 

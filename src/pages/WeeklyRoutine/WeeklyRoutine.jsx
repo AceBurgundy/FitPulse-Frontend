@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import Base from "../Base/Base"
 import "./WeeklyRoutine.css"
 import axios from "axios"
+import WeekCardSkeleton from "../../components/WeekCard/WeekCardSkeleton"
 
 const WeeklyRoutine = () => {
 
@@ -12,6 +13,7 @@ const WeeklyRoutine = () => {
     const [weeks, setWeeks] = useState([])
     const [workoutName, setWorkoutName] = useState("")
     const [gender, setGender] = useState("")
+    const [isLoading, setIsLoading] = useState(true)
     const hashed_id = sessionStorage.getItem("userId")
 
     useEffect(() => {
@@ -22,6 +24,7 @@ const WeeklyRoutine = () => {
             setWeeks(data.data)
             setWorkoutName(data.workoutName)
             setGender(data.gender)
+            setIsLoading(false)
         })
         .catch (error => {
             
@@ -57,7 +60,11 @@ const WeeklyRoutine = () => {
                 <p id="weekly-plans__navigation-workout-name">{workoutName}</p>
             </div>
             <div id="weekly-plans__week-container">
-                {weeks.map((week, index) => (
+            {
+            isLoading ?
+                <WeekCardSkeleton cards={8} />
+            :
+                weeks.map((week, index) => (
                     <WeekCard 
                         key={index} 
                         currentWeek={week.current_week} 
@@ -67,7 +74,8 @@ const WeeklyRoutine = () => {
                         workout_id={workout_id} 
                         handleNotification={handleNotification}
                     />
-                ))}
+                ))
+            }
             </div>
         </div>
     </>

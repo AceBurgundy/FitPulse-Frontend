@@ -1,7 +1,7 @@
 .exercise-item {
     display: grid;
     grid-template-columns: 15% 85%;
-    background-color: white;
+    background-color: inherit;
     border-bottom: 1px solid #908e8e55;
 }
 

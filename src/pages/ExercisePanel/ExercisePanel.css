@@ -9,7 +9,6 @@
 #exercise-panel__bottom {
     font-family: "Poppins",sans-serif;
     padding: 1rem;
-    height: 100vh;
     overflow-y: scroll;
 }
 
@@ -62,7 +61,7 @@
     font-size: 2rem;
     margin-top: 5px;
     font-family: 'Bebas Neue', cursive;
-    transition: 500ms ease-in-out;
+    border: 2px solid white;
 }
 
 .exercise-panel__timer-opener.timer-shown {
@@ -74,7 +73,7 @@
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -100%;
+    bottom: -50%;
     margin-bottom: 1rem;
     border-radius: 30px;
     display: flex;
@@ -83,7 +82,7 @@
     gap: calc(1rem + 1vw);
     padding: 1em;
     box-shadow: 0px -7px 200px -7px rgba(0,0,0,0.35);
-    transition: 500ms ease-in-out;
+    transition: 250ms ease-in-out;
 }
 
 .exercise-panel__timer.show {

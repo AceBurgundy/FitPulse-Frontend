@@ -1,8 +1,7 @@
-import React, {useState, useEffect, useRef, useContext} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../AppMode'
 import Base from '../../pages/Base/Base'
-import Draggable from 'react-draggable';
 import "./SmallNavigation.css"
 import axios from 'axios'
 
@@ -15,32 +14,15 @@ const SmallNavigation = () => {
     const navigate = useNavigate()
 
     const [panelToggled, setPanelToggled] = useState(false)
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [xPosition, setXPosition] = useState(0)
-    const divRef = useRef(null);
     const [currentMode, setCurrentMode] = useState("")
     const { sharedData, updateSharedData } = useContext(GlobalContext);
 
-    function handleDrag(event, ui) {
-        setPosition({ x: xPosition, y: ui.y });
-    }
-
     useEffect(() => {
-      if (divRef.current) {
-        const { x } = divRef.current.getBoundingClientRect();
-        setXPosition(x)
-      }
-
-      setCurrentMode(sharedData.mode)
-
-    }, [sharedData.mode]);
+        setCurrentMode(sharedData.mode)
+    })
 
     function handlePanelToggle() {
         setPanelToggled((prevState) => !prevState)
-        if (divRef.current) {
-            const { x } = divRef.current.getBoundingClientRect();
-            setXPosition(x)
-        }
     }
 
     function handleModeChange() {
@@ -93,13 +75,11 @@ const SmallNavigation = () => {
             <Base onNotification={(pillNotification) => Base.pillNotification = pillNotification} />
             <div id='small-navigation-background' style={panelToggled ? { opacity: 1, display: "block" } : {opacity: 0, display: "none"}}></div>
             <div className={panelToggled ? `small-navigation selected` : "small-navigation"}>
-                <Draggable position={position} onDrag={handleDrag} >
-                    <div id="small-navigation__toggle" ref={divRef} onTouchStart={handlePanelToggle} onClick={handlePanelToggle}>
+                    <div id="small-navigation__toggle" onTouchStart={handlePanelToggle} onClick={handlePanelToggle}>
                         <MenuIcon id="small-navigation__toggle-icon" />
                     </div>
-                </Draggable>
                 <div id="small-navigation__top">
-                    <p id="small-navigation__top-title">{xPosition}</p>
+                    <p id="small-navigation__top-title">FitPulse</p>
                 </div>
                 <button id="small-navigation__logout" onClick={handleLogout}>
                     Logout

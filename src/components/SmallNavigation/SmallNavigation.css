@@ -8,6 +8,21 @@
     flex-direction: column;
     align-items: center;
     transition: 500ms;
+    z-index: 4;
+}
+
+
+#small-navigation-background {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background: rgba( 21, 21, 21, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    opacity: 0;
+    transition: 500ms;
 }
 
 .small-navigation.selected {
@@ -26,6 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #small-navigation__toggle-icon {
@@ -55,4 +71,13 @@
     border: 1px solid #c3c3c3;
     padding: 1rem;
     color: black;
+}
+
+#small-navigation__mode-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    width: 2rem;
+    cursor: pointer;
 }

@@ -25,9 +25,9 @@ function Map() {
             <Route path="/FitPulse/workout-plans/:workout_id/week/list" element={<WeeklyRoutine />} />
             <Route path="/FitPulse/workout-plans/:workout_id/week/day/:day_id/list" element={ <Exercises/>} />
           </Routes>
-        </Router>
+        </Router> 
     </>
-    )
+  )
 }
 
 export default Map

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 import './App.css';
 import Map from './Map';
 import axios from 'axios'
@@ -32,7 +34,13 @@ function App() {
 
   return (
     <div className="App">
-      <Map />
+      <SkeletonTheme 
+        baseColor="#ebebeb"
+        highlightColor="#f5f5f5">
+
+        <Map />
+        
+      </SkeletonTheme>
     </div>
   );
 }

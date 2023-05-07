@@ -47,7 +47,7 @@
     font-size: 0.7rem;
 }
 
-.week_card__right-days {
+.week_card__right-days, .week_card__right-days-skeleton {
     display: flex;
     align-items: center;
     width: 88%;
@@ -56,6 +56,32 @@
     padding: 1em;
     margin-bottom: 0.8rem;
     border-radius: 5px;
+    height: fit-content;
+}
+
+.week_card__right-days {
+    position: relative;
+}
+
+@keyframes summonAfter {
+    0% {
+      opacity: 0;
+    }
+    95% {
+        opacity: 0;
+      }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .week_card__right-days.locked {
@@ -63,8 +89,12 @@
 }
 
 .week_card__right-days.current {
-    background-color: white;
+    background-color: rgb(249, 249, 249);
     pointer-events: all;
+}
+
+.week_card__right-days.current > .week_card__right-days-day-circle {
+    color: #000;
 }
 
 .week_card__right-days.female {
@@ -84,8 +114,18 @@
     cursor: pointer;
 }
 
+.week_card__right-days-skeleton {
+    background-color: #c2c2c2;
+}
+
 .week_card__right-days-day-circle {
+    color: inherit;
     text-decoration: none;
+}
+
+.week_card__right-days-day-circle-skeleton {
+    width: 4rem;
+    height: 4rem;
 }
 
 .week_card__right-days-day-circle.gray {

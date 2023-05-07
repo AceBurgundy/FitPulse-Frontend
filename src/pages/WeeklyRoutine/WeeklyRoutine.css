@@ -1,7 +1,8 @@
 #weekly-plans {
     display: grid;
-    grid-template-rows: 8% 92%;
+    grid-template-rows: 10% 90%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .weekly-plans__navigation {
@@ -25,7 +26,6 @@
 
 #weekly-plans__week-container {
     overflow-y: scroll;
-    height: 90vh;
     padding: 0.5em 0;
 }
 

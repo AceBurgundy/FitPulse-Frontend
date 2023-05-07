@@ -46,6 +46,11 @@ body {
 	overflow: hidden;
 }
 
+
+html, body {
+	height: -webkit-fill-available;
+}
+
 ol, ul {
 	list-style: none;
 }

@@ -4,6 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import './App.css';
 import Map from './Map';
 import axios from 'axios'
+import { GlobalContextProvider } from './AppMode';
 
 function App() {
   const [orientation, setOrientation] = useState('portrait');
@@ -21,6 +22,7 @@ function App() {
     return () => {
       window.removeEventListener('resize', checkOrientation);
     };
+    
   }, []);
 
   if (orientation === 'landscape') {
@@ -33,15 +35,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <SkeletonTheme 
-        baseColor="#ebebeb"
-        highlightColor="#f5f5f5">
-
-        <Map />
-        
-      </SkeletonTheme>
-    </div>
+    <GlobalContextProvider>
+      <div className="App">
+        <SkeletonTheme baseColor="#ebebeb" highlightColor="#f5f5f5">
+            <Map />
+        </SkeletonTheme>
+      </div>
+    </ GlobalContextProvider>
   );
 }
 

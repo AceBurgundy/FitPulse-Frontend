@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { GlobalContext } from './AppMode';
 
 // /pages
 import Register from './pages/Authentication/Register/Register'
@@ -12,6 +13,18 @@ import WeeklyRoutine from './pages/WeeklyRoutine/WeeklyRoutine'
 import Exercises from './pages/Exercises/Exercises'
 
 function Map() {
+  const { sharedData } = useContext(GlobalContext);
+
+  useEffect(() => {
+    if (sharedData.mode === "night") {
+        document.body.style.backgroundColor = "black"
+        document.body.style.color = "white"
+    } else {
+        document.body.style.backgroundColor = ""
+        document.body.style.color = "" 
+    }
+  })
+
   return ( 
     <>
         <Router>

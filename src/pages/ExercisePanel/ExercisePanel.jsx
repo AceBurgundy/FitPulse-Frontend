@@ -23,6 +23,7 @@ const ExercisePanel = ({ exerciseObjects , gender}) => {
    function handleDrag(event, ui) {
     setPosition({ x: ui.x, y: ui.y });
   }
+  
    let exerciseObject = exerciseObjects[currentIndex]
 
    exerciseObject.steps.map((step, index) => {
@@ -121,7 +122,6 @@ const ExercisePanel = ({ exerciseObjects , gender}) => {
       if (direction === "left") {
          if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1)
-            // sets exercise as completed
          } else {
             handleNotification("You're at the first")
          }

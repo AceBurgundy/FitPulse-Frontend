@@ -1,8 +1,9 @@
 .exercise-item {
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 15% 65% 20%;
     background-color: inherit;
     border-bottom: 1px solid #908e8e55;
+    cursor: pointer;
 }
 
 .exercise-item__drag-icon {
@@ -16,7 +17,7 @@
     justify-content: center;
 }
 
-.exercise-item__right {
+.exercise-item__center {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -24,12 +25,32 @@
     padding: 1.5em 0;
 }
 
-.exercise-item__right-exercise-name {
+.exercise-item__center-exercise-name {
     font-size: 1rem;
 }
 
-.exercise-item__right-exercise-settings {
+.exercise-item__center-exercise-settings {
     display: flex;
     gap: 5px;
+}
+
+.exercise-item__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-item__right-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.exercise-item__right-play-icon {
+    width: 1.5rem;
+    height: fit-content;
 }
 

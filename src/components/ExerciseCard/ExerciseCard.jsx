@@ -46,8 +46,8 @@ const ExerciseCard = ({exercise, gender}) => {
                 }
         </div>
         <div className="exercise-item__right">
-            <Link class={`exercise-item__right-link ${gender}`} to={watchLink}>
-                <PlayIcon class="exercise-item__right-play-icon" />
+            <Link className={`exercise-item__right-link ${gender}`} to={watchLink}>
+                <PlayIcon className="exercise-item__right-play-icon" />
             </Link>
         </div>
     </div>

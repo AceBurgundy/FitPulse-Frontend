@@ -99,7 +99,7 @@ const SmallNavigation = () => {
                     </div>
                 </Draggable>
                 <div id="small-navigation__top">
-                    <p id="small-navigation__top-title">FitPulse</p>
+                    <p id="small-navigation__top-title">{xPosition}</p>
                 </div>
                 <button id="small-navigation__logout" onClick={handleLogout}>
                     Logout

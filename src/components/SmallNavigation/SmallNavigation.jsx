@@ -75,7 +75,7 @@ const SmallNavigation = () => {
             <Base onNotification={(pillNotification) => Base.pillNotification = pillNotification} />
             <div id='small-navigation-background' style={panelToggled ? { opacity: 1, display: "block" } : {opacity: 0, display: "none"}}></div>
             <div className={panelToggled ? `small-navigation selected` : "small-navigation"}>
-                    <div id="small-navigation__toggle" onTouchEnd={handlePanelToggle} onClick={handlePanelToggle}>
+                    <div id="small-navigation__toggle" onClick={handlePanelToggle}>
                         <MenuIcon id="small-navigation__toggle-icon" />
                     </div>
                 <div id="small-navigation__top">

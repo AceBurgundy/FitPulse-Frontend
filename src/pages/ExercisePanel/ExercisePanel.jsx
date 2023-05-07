@@ -15,18 +15,16 @@ const ExercisePanel = ({ exerciseObjects, gender }) => {
   const [timerSeconds, setTimerSeconds] = useState(60);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
   const [isToggled, setIsToggled] = useState(false);
 
   let steps = [];
 
   function handleDrag(event, ui) {
     setPosition({ x: ui.x, y: ui.y });
-    setIsDragging(true);
   }
 
   function handleDragStop() {
-    setIsDragging(false);
+    handleTimerShow()
   }
 
   let exerciseObject = exerciseObjects[currentIndex];
@@ -40,15 +38,12 @@ const ExercisePanel = ({ exerciseObjects, gender }) => {
   });
 
   function handleTimerShow() {
-   console.log(isDragging);
-    if (!isDragging) {
-      setIsToggled(!isToggled);
-    }
+      setIsToggled(true);
   }
 
-   function hideTimePanel() {
-      setIsToggled(!isToggled);
-   }
+  function hideTimePanel() {
+    setIsToggled(false);
+  }
 
   const handleTimerButtonClick = () => {
     if (timerRunning) {
@@ -185,7 +180,6 @@ const ExercisePanel = ({ exerciseObjects, gender }) => {
                   isToggled ? "timer-shown" : ""
                 }`}
                 onClick={handleTimerShow}
-                onTouchEnd={handleTimerShow}
               >
                 {timerRunning ? (
                   formatTime()

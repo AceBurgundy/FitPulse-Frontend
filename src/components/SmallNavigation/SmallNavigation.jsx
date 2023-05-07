@@ -94,7 +94,7 @@ const SmallNavigation = () => {
             <div id='small-navigation-background' style={panelToggled ? { opacity: 1, display: "block" } : {opacity: 0, display: "none"}}></div>
             <div className={panelToggled ? `small-navigation selected` : "small-navigation"}>
                 <Draggable position={position} onDrag={handleDrag} >
-                    <div id="small-navigation__toggle" ref={divRef} onClick={handlePanelToggle}>
+                    <div id="small-navigation__toggle" ref={divRef} onTouchStart={handlePanelToggle} onClick={handlePanelToggle}>
                         <MenuIcon id="small-navigation__toggle-icon" />
                     </div>
                 </Draggable>

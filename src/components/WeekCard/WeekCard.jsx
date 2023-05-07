@@ -8,7 +8,6 @@ import ThinArrowRightIcon from "../../assets/svg/ThinArrowRightIcon"
 import LightningIcon from "../../assets/svg/LightningIcon"
 import TrophyIcon from "../../assets/svg/TrophyIcon"
 import CheckIcon from "../../assets/svg/CheckIcon"
-import Skeleton from "react-loading-skeleton"
 
 function currentDay() {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
